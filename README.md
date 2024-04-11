@@ -3,7 +3,7 @@
 
 ```When the data points are arranged in increasing order, data are divided into four sections of 25% of the data each.```
 
-<img src="../quartiles/image/quartile.JPG" alt='quartile'></img>
+<img src="./image/quartile.JPG" alt='quartile'></img>
 
 <h2 style='color:grey; font-style:italic'>How to calculate quartiles?</h2>
 
