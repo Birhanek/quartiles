@@ -32,3 +32,16 @@ def reverse_number(num):
         print(f'{num} is below the threshold')if(num < 100) else print(f'{num} is above the threshold')
 
 reverse_number(18)
+
+# Write a program that prints the prime between 1 and an input N
+num = int(input('enter an integer number and then i will print the prime numbers between 1 and N(The number you feed me): '))
+prime = []
+for index in range(2,num):
+  count =0
+  for start in range(1,(index//2 + 1)):
+    if(index % start ==0):
+      count +=1
+  if(count <2):
+    prime.append(index)
+print(prime)
+
