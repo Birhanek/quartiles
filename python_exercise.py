@@ -45,3 +45,13 @@ for index in range(2,num):
     prime.append(index)
 print(prime)
 
+# Finding factorial of a number
+def factorial(n):
+   factor = 1
+   while(n >=1):
+      factor *= n
+      n -=1
+   return factor
+
+print(factorial(6))
+
