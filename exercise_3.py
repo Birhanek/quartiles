@@ -62,7 +62,7 @@ exercise4()
 
 #Write a program that calculates how much money someone has left after taxes, given their income.
 def exercise5():
-    salary = float(input('Enter your salary and I will tell how much it will left after tax'))
+    salary = float(input('Enter your salary and I will tell how much it will left after tax: '))
     salary_after_tax = 0
     if salary < 0:
         print("Salary can't be negative")
