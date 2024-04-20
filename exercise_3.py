@@ -77,7 +77,28 @@ def exercise5():
             salary_after_tax = salary - (salary * 0.34)
             print(f'Your income after taxes is {salary_after_tax} euro’s')
 #exercise5()
+def exercise6():
+    letter = input('Enter from a single letter to maximum 5 letters of a word: ')
+    if len(letter) > 5:
+        print("Sorry, I can't process")
+    else:
+        if len(letter) == 1:
+            print(6*letter)
+        elif len(letter) == 2:
+            temp = letter[1] + letter[0]
+            print(temp)
+        elif len(letter) == 3:
+            temp = letter[2] + letter[0] + letter[1]
+            print(temp)
+        elif len(letter) == 4:
+            temp = letter[3] + letter[2] + letter[1] + letter[0]
+            print(temp)
+        else:
+            print(*letter.replace('','t').removeprefix('t').removesuffix('t'))
 
+exercise6()           
+# Write a program that gives the user a basic test with three questions. If they have a question
+# wrong stop the quiz, if they have it right give them the next question
 def exercise7():
     while True:
         answer_1 = int(input('What is 2 * 2? '))
@@ -99,4 +120,4 @@ def exercise7():
         else:
             print('That is false, you failed the test!')
             break
-exercise7()
+#exercise7()
