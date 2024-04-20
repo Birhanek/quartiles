@@ -58,7 +58,7 @@ def exercise4():
         largest = fourth_number
     print(f'The largest number is {largest}')
 
-exercise4()
+#exercise4()
 
 #Write a program that calculates how much money someone has left after taxes, given their income.
 def exercise5():
@@ -76,4 +76,27 @@ def exercise5():
         else:
             salary_after_tax = salary - (salary * 0.34)
             print(f'Your income after taxes is {salary_after_tax} euro’s')
-exercise5()
+#exercise5()
+
+def exercise7():
+    while True:
+        answer_1 = int(input('What is 2 * 2? '))
+        if answer_1 == 4:
+            print('That is correct')
+            answer_2 = int(input('What is 6 / 3? '))
+            if answer_2 == 2:
+                print('That is correct!')
+                answer_3 = int(input('What is 9 * 9? '))
+                if answer_3 == 81:
+                    print('Correct! You passed the test!')
+                    break
+                else:
+                    print('That is false, you failed the test!')
+                    break
+            else:
+                print('That is false, you failed the test!')
+                break
+        else:
+            print('That is false, you failed the test!')
+            break
+exercise7()
