@@ -9,7 +9,8 @@ def exercise1():
        print(f'This is a vowel')
    else:
        print(f'This is not a vowel')
-#exercise1()
+exercise1()
+
 # Write a program that prints whether an integer is in between 1000 and 2000. If it is not, print
 # whether it is lower than 1000 or higher than 2000.
 def exercise2():
@@ -22,7 +23,8 @@ def exercise2():
     else:
        print('This number is higher than 2000')
 
-#exercise2()
+exercise2()
+
 # Write a program that prints the sum of 3 given numbers, but if all 3 numbers are the same it
 # should print 4 times the sum of the 3 numbers.
 
@@ -40,7 +42,7 @@ def exercise3():
        sum_numbers = first_number + second_number + third_number
        print(f'The sum of these numbers is {sum_numbers}')
 
-#exercise3()
+exercise3()
 
 # Write a program that finds the largest of 4 numbers.
 
@@ -58,7 +60,7 @@ def exercise4():
         largest = fourth_number
     print(f'The largest number is {largest}')
 
-#exercise4()
+exercise4()
 
 #Write a program that calculates how much money someone has left after taxes, given their income.
 def exercise5():
@@ -76,7 +78,11 @@ def exercise5():
         else:
             salary_after_tax = salary - (salary * 0.34)
             print(f'Your income after taxes is {salary_after_tax} euro’s')
-#exercise5()
+exercise5()
+
+#Write a program that takes a string with a maximum size of 5. Do something different
+#depending on the size of the string:
+
 def exercise6():
     letter = input('Enter from a single letter to maximum 5 letters of a word: ')
     if len(letter) > 5:
@@ -96,7 +102,8 @@ def exercise6():
         else:
             print(*letter.replace('','t').removeprefix('t').removesuffix('t'))
 
-exercise6()           
+exercise6()    
+       
 # Write a program that gives the user a basic test with three questions. If they have a question
 # wrong stop the quiz, if they have it right give them the next question
 def exercise7():
@@ -120,4 +127,4 @@ def exercise7():
         else:
             print('That is false, you failed the test!')
             break
-#exercise7()
+exercise7()
