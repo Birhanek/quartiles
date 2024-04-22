@@ -6,23 +6,27 @@ import json
 
 def guess():
     African_countries : list
-    count = 0
-    countries = list()
-    length = int(input('How many countries do you know in Africa: '))
-    while count < length:
-        country = input(f'Enter the country {count + 1}: ')
-        countries.append(country)
-        count+=1
-
+    score = 0
+    lives = 3
+    print('You have 3 lives and if you make incorrect guess there is a reduction in life!')
     with open('countries.json','r') as read_file:
         African_countries = json.load(read_file)
-    
-    count = 0
-    for land in countries:        
-        if land in African_countries:
-            count+=1
-             
-    print(f'You guess only {count} countries')        
+    while True:
+        if lives > 0 and len(African_countries) > 0:
+            country = input(f'Enter the country: ')
+            if country in African_countries:
+                print(f'Good guess!')
+                score +=1
+                African_countries.remove(country)
+            else:
+                print('You missed it!')
+                lives -=1
+        else:
+            break
+
+
+           
+    print(f'You guess only {score} countries')        
 guess()
 
 
