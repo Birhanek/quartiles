@@ -42,26 +42,25 @@ class caesar:
         self.key = key
     # To  encrypt a given message based on a specified key
     def encrypt(self,plain_text:str):
-        alphabets ="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        alphabets ="ABCDEFGHIJKLMNOPQRSTUVWXYZ ,."
         alphabets = alphabets.lower()
         list_alphabets = list(alphabets)
 
         cipher_text =''
         sequence = 0
 
-        plain_text = plain_text.replace(' ','').lower()
+        plain_text = plain_text.lower()
         list_plain_text = list(plain_text)
-        print(plain_text)
         for letter in list_plain_text:  
             if letter in list_alphabets:
                 index = alphabets.index(letter)
-                sequence = (index + self.key) % 26
+                sequence = (index + self.key) % 29
                 cipher_text += alphabets[sequence]
         return cipher_text
     
     # To decrypt a give secret message in to a human understandable language
     def decrypt(self,cipher_text:str):
-        alphabets ="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        alphabets ="ABCDEFGHIJKLMNOPQRSTUVWXYZ ,."
         alphabets = alphabets.lower()
         list_alphabets = list(alphabets)
         list_cipher = list(cipher_text)
@@ -71,7 +70,7 @@ class caesar:
         for letter in list_cipher:
             if letter in list_alphabets:
                 index = alphabets.index(letter)
-                sequence = (index - self.key) % 26
+                sequence = (index - self.key) % 29
                 plain_text += alphabets[sequence]
         return plain_text
 
@@ -79,7 +78,7 @@ class caesar:
 
 caesar_cipher = caesar(5)
 
-encrypted = caesar_cipher.encrypt("Use a Python program to decode the following secret message")
+encrypted = caesar_cipher.encrypt(" Het kan ook betekenen dat je iemand te veel toegeeft of te veel toegeeflijkheid toont, wat kan leiden tot het ontwikkelen van ongezonde gewoonten of attitudes. Bijvoorbeeld, ouders kunnen hun kinderen verwennen met cadeaus of privileges, of iemand kan zichzelf verwennen met een spa-dag of een luxe vakantie.")
 print(encrypted)
 
 print()
