@@ -97,7 +97,7 @@ def exercise6():
             temp = letter[2] + letter[0] + letter[1]
             print(temp)
         elif len(letter) == 4:
-            temp = letter[3] + letter[2] + letter[1] + letter[0]
+            temp = letter[::-1]
             print(temp)
         else:
             print(*letter.replace('','t').removeprefix('t').removesuffix('t'))
