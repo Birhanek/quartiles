@@ -38,8 +38,10 @@ def equilibriumPoint(positive_integer_list:list, size:int) -> int:
                 half_index -= 1
             elif r_summer > l_summer:
                 half_index += 1
-            else:
+            elif r_summer == l_summer:
                 return half_index
+            else:
+                return -1
 
 def summer(integer_list:list) -> int:
     sum = 0
@@ -49,6 +51,6 @@ def summer(integer_list:list) -> int:
     return sum
 
 
-print(equilibriumPoint([8],1))
+print(equilibriumPoint([8,4,8,8],4))
 
     
