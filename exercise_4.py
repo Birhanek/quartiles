@@ -67,11 +67,14 @@ def analysis_frank_health(lst_1:list, lst_2:list) ->str:
     quarter = ''
     if(sickness_quarter < len(sickness_days)//2):
         quarter = 'Year one'
-    else: quarter= 'Year two'
-    return f"The full list of frank’s sick days is: {sickness_days}.Frank was sick the most in quarter {sickness_quarter} of the {quarter}."
-print(analysis_frank_health([10, 4, 5, 19], [7, 8, 2, 12]))
+        sickness_quarter = lst_1.index(maximum)
+    else:
+        quarter= 'Year two'
+        sickness_quarter = lst_2.index(maximum)
+    return f"The full list of frank’s sick days is: {sickness_days}.\nFrank was sick the most in quarter {sickness_quarter + 1} of the {quarter}."
+print(analysis_frank_health([10, 4, 5, 7], [19, 8, 2, 12]))
 print()
-print(analysis_frank_health([0, 4, 1, 2], [3, 4, 0, 0]))     
+print(analysis_frank_health([0, 3, 1, 2], [4, 4, 0, 0]))     
 
 
     
