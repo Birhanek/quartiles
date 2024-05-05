@@ -130,19 +130,6 @@ def exercise7():
 #exercise7()
 
 
-lst_numbers = []
-
-lst_numbers.append(1)
-lst_numbers.append(5)
-lst_numbers.append(3)
-lst_numbers.append(2)
-lst_numbers.append(4)
-#lst_numbers.extend([1,2,3,4])
-lst_numbers.insert(4,5)
-
-
-print((lst_numbers))
-
 # Arbitrary numbers of arguments: this creates tuples fruits =('Mango','Banana','Appel','Avocado')
 def fruiterer(*fruits):
     for fruit in fruits:
@@ -159,4 +146,26 @@ def country_capital(**countries):
 
 country_capital(Ethiopia='Addis Ababa', Netherlands='Amsterdam',Kenya='Nairobi',Germany='Berlin')
 
+
+import functools
+
+def comprehension():
+    lst = filter(lambda x:x % 2 == 0, range(1,101))
+    print(list(lst))
+
+    print()
+    #   filtering negative numbers 
+    lst = filter((lambda x: x < 0), range(-20,5)) 
+    print (list(lst)) 
+
+    lst_2 = [90,46,78,34,56,67,35,12,32,47]
+    
+    lst_2.sort()
+    lst_2.reverse()
+    print(lst_2)
+    
+    #  implementing max() function, using 100
+    print (functools.reduce(lambda a,b: a+b, [7, 12, 45, 100, 15]))
+
+comprehension()
 
