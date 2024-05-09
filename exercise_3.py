@@ -159,7 +159,33 @@ def comprehension():
     print (list(lst)) 
 
     lst_2 = [90,46,78,34,56,67,35,12,32,47]
-    
+
+    tpl_1 = tuple(range(1,11))
+
+    my_tuple = ("11",11,[2,"two",("six",6)],(5,"fair"))
+    print(my_tuple[-1], type(my_tuple[-1]), sep='\n')
+    print(my_tuple[-1][1])
+    print(my_tuple[2][2][0])
+
+    my_dict ={'name':'Birhane','born':1996,'gender':'M'}
+    my_dict_2 = {'country':'Ethiopia'} | dict(region='Tigray',religion='Orthodox')
+    my_dict['city'] = 'Addiss Ababa'
+
+    # my_dict_3 = {**my_dict, **my_dict_2}
+    # my_dict.update(my)
+    # print(my_dict_3)
+
+    dict1 = {'x': 10, 'y': 8}
+    dict2 = {'a': 6, 'b': 4, 'a':45, 'a':78, 'b':56}
+    #dict2['a'] = 26
+    merged_dict = my_dict | my_dict_2
+    print(dict1 | dict2)
+    print(merged_dict)
+    print(dict2)
+
+    # print(tpl_1)
+    # print()
+    # print(my_dict)
     lst_2.sort()
     lst_2.reverse()
     print(lst_2)
@@ -168,4 +194,6 @@ def comprehension():
     print (functools.reduce(lambda a,b: a+b, [7, 12, 45, 100, 15]))
 
 comprehension()
+
+
 
