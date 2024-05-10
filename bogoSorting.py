@@ -3,7 +3,6 @@
 #Reshuffle at random and checking is it sorted 
 
 import random
-import math
 
 # To check whether the given list is in sorted manner or not, if it is already sorted it returns true
 
