@@ -23,8 +23,7 @@ def check_key(dict_1:dict, key:any) ->str:
         dict_1[key] = "empty"
         return f'The new dictionary is: {dict_1}'
 
-my_dict = {"dad": "Eise", "sister_1": "Iris",
-"sister_2": "Nicky"}
+my_dict = {"dad": "Eise", "sister_1": "Iris", "sister_2": "Nicky"}
 print(check_key(my_dict,key='dad'))
 
 my_dict1 = {"fruit": "Apple", "vegetable":
@@ -68,8 +67,36 @@ def list_objects(orange_objects:set, fruits:set, red_objects:set) -> list:
 
 print(list_objects(orange_objects = orange_objects, fruits = fruits, red_objects = red_objects))
 
+#Write a program that checks whether a dictionary is empty.
+def exercise4(my_dict:dict) -> str:
+    if len(my_dict) == 0:
+        return f'The dictionary is empty'
+    else:
+        return f'The dictionary is not empty'
+
+my_dict = {0: 19, 1: 33, 2: 18, 3: 30, 4: 26}
+print(exercise4(my_dict))
+
+print()
+# There is a dictionary of 5 integers. Write a program that gives the same
+# dictionary, but with the values in ascending order
+def exercise5(my_dict: dict) ->str:
+
+    sorted_values = list(my_dict.values())
+    sorted_values.sort()
+    keys = list(my_dict.keys())
+    new_dict = {}
+    for key in keys:
+        new_dict[key] = sorted_values[key]
+    return f'The sorted dictionary is: {new_dict}'
 
 
+
+print(exercise5(my_dict))
+
+my_dict = {0: 45, 1: 7, 2: 44, 3: 81, 4: 6}
+
+print(exercise5(my_dict = my_dict))
 
 
 
