@@ -43,6 +43,32 @@ red_objects = {'apple', 'crab', 'rose', 'strawberry'}
 fruits = {'orange', 'apple', 'strawberry', 'grape', 'kiwi', 'mandarin'}
 print(compare_sets(red_objects, fruits))
 
+# Write a program that prints a set that contains all of the red and
+# orange fruits but none of the other ones
+def compare_objects(orange_objects:set, fruits:set, red_objects:set) ->str:
+
+    only_red_orangeObjects = red_objects.union(orange_objects).intersection(fruits)
+
+    return f'Only Orange and Red objects :{only_red_orangeObjects}'
+
+orange_objects = {'basketball', 'fanta', 'orange', 'autumn leaves', 'mandarin'}
+
+print(compare_objects(orange_objects=orange_objects, fruits=fruits, red_objects=red_objects))
+
+# Write a program that prints a LIST(!!!!) that contains all of the objects and
+# fruits. Make sure the list doesn’t have any duplicates
+def list_objects(orange_objects:set, fruits:set, red_objects:set) -> list:
+
+    all_objects  = fruits.union(orange_objects).union(red_objects)
+
+    lst_all_objects = list(all_objects)
+
+    return lst_all_objects
+    
+
+print(list_objects(orange_objects = orange_objects, fruits = fruits, red_objects = red_objects))
+
+
 
 
 
