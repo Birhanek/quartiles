@@ -83,6 +83,7 @@ print()
 def exercise5(my_dict: dict) ->str:
 
     sorted_values = list(my_dict.values())
+
     sorted_values.sort()
     keys = list(my_dict.keys())
     new_dict = {}

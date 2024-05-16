@@ -56,3 +56,65 @@ def factorial(n):
 print(factorial(6))
 
 
+
+# while True:
+#    age = input('Enter your age:')
+
+#    if age.isnumeric():
+#       print(age)
+#    else:
+#       break
+      
+# correct_value = 56
+
+# while True:
+#    guess_value = int(input('Enter your guess: '))
+
+#    if correct_value == guess_value:
+#       print('Your guess is correct')
+#       break
+#    elif guess_value > correct_value :
+#       if guess_value > correct_value + 10:
+#          print('Much lower ')
+#       else:
+#          print(' little lower value!')
+#    else:
+#       if guess_value + 10 < correct_value:
+#          print(' Much higher ')
+#       else:
+#          print('little higher')
+
+# sentences = input('Enter what is in your mind: ')
+# sentences_lst = sentences.split()
+# i = len(sentences_lst) - 1
+# longest = sentences_lst[0]
+
+# while  i > 0:
+#    if len(sentences_lst[i]) > len(longest):
+#       longest = sentences_lst[i]
+#    i -=1
+# print(f'The longest word is "{longest}" in "{sentences}". With {len(longest)} characters!')
+
+names = ["Ahmed", "Aisha", "Adam", "Joseph", "Gabriel"]
+
+for name in names:
+   print(f'Hello {name}')
+
+numbers =[]
+for num in range(1,6):
+   numbers.append(num)
+print(numbers)
+
+
+word = input('Enter your phrase: ')
+
+linked_word =''
+for character in word:
+   linked_word += character + '-'
+print(linked_word.rstrip('-'))
+
+for i in range(1,6):
+   print(i*'*')
+for j in range(4,0,-1):
+   print(j*'*')
+   
